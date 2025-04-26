@@ -1,101 +1,187 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  line-height: 1.5;
-  color: rgb(255 255 255 / 87%);
-  color-scheme: light dark;
-  background-color: #242424;
+  --black: #121826;
+  --black-lighten: #212936;
+  --gray: #9da3ae;
+  --gray-lighten: #d2d5da;
+  --white-darken: #e5e7eb;
+  --blue-lighten: #dee9fc;
+  --red-lighten: #fbe5e6;
+  --yellow-lighten: #fceed8;
+
+  /* color map */
+  --bg-color: var(--black);
+  --bg-color-card: var(--black-lighten);
+  --bg-color-icon-first: var(--yellow-lighten);
+  --bg-color-icon-second: var(--blue-lighten);
+  --bg-color-icon-third: var(--red-lighten);
+  --text-color-header: var(--white-darken);
+  --text-color-sub: var(--gray);
+  --text-color-card: var(--white-darken);
+  --text-color-card-sub: var(--gray);
+
+  /* font */
+  --font-base: 'Outfit', system-ui, 'Avenir', 'Helvetica', 'Arial', sans-serif;
+}
+
+html,
+body {
+  font-family: var(--font-base);
   font-synthesis: none;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: var(--bg-color);
+
+  /*
+    ref: https://developer.mozilla.org/ja/docs/Web/CSS/image/image-set
+    課題から提供されている画像だと、デザイン上の背景画像よりサイズが小さく再現できない...。
+  */
+
+  /* image-set 非対応ブラウザ時のフォールバック */
+  background-image: url('/images/Background_image.svg');
+  /* stylelint-disable-next-line declaration-property-value-no-unknown */
+  background-image: image-set(
+    url('/images/Background_image.svg'),
+    url('/images/Background_image@2x.png') 2x,
+    url('/images//Background_image@3x.png') 3x
+  );
+  background-size: 1280px;
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: inherit;
   text-decoration: inherit;
 }
 
-a:hover {
-  color: #535bf2;
-}
+/* common
+-------------------- */
 
-body {
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  margin: 0;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-#app {
-  max-width: 1280px;
-  padding: 2rem;
+.container {
+  max-width: 640px;
+  padding: 0 3.75%;
   margin: 0 auto;
+}
+
+@media (width >= 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (width >= 1024px) {
+  .container {
+    max-width: 1024px;
+    padding: 0 3.5%;
+  }
+}
+
+@media (width >= 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* header
+-------------------- */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 28px 0;
+}
+
+.header__title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-color-header);
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  transition: filter 300ms;
-  will-change: filter;
+.header__description {
+  margin-top: 12px;
+  font-size: 1rem;
+  color: var(--text-color-sub);
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-button {
-  padding: 0.6em 1.2em;
-  font-family: inherit;
-  font-size: 1em;
-  font-weight: 500;
-  cursor: pointer;
-  background-color: #1a1a1a;
-  border: 1px solid transparent;
-  border-radius: 8px;
-  transition: border-color 0.25s;
-}
-
-button:hover {
-  border-color: #646cff;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #fff;
+@media (width >= 1024px) {
+  .header {
+    padding: 48px calc(calc(100vw - 420px) / 2) 0;
   }
+}
 
-  a:hover {
-    color: #747bff;
-  }
+/* main
+-------------------- */
 
-  button {
-    background-color: #f9f9f9;
+.main {
+  padding: 48px 0;
+}
+
+.feedback-card-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 48px;
+  align-items: center;
+}
+
+.feedback-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  max-width: 312px;
+  padding: 24px;
+  background-color: var(--bg-color-card);
+  border-radius: 12px;
+  box-shadow: 0 30px 100px 0 rgb(17 23 41 / 15%);
+}
+
+.feedback-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  font-size: 1.25rem;
+  border-radius: 50%;
+}
+
+.feedback-card__icon-first {
+  background-color: var(--bg-color-icon-first);
+}
+
+.feedback-card__icon-second {
+  background-color: var(--bg-color-icon-second);
+}
+
+.feedback-card__icon-third {
+  background-color: var(--bg-color-icon-third);
+}
+
+.feedback-card__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-color-card);
+}
+
+.feedback-card__description {
+  font-size: 1rem;
+  line-height: 1.3;
+  color: var(--text-color-card-sub);
+}
+
+.feedback-card__img {
+  border-radius: 12px;
+}
+
+@media (width >= 1024px) {
+  .feedback-card-list {
+    flex-flow: row wrap;
+    column-gap: 48px;
+    justify-content: center;
   }
 }
