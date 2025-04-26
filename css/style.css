@@ -110,7 +110,7 @@ a {
 
 @media (width >= 1024px) {
   .header {
-    padding: 48px 300px 0;
+    padding: 48px calc(calc(100vw - 420px) / 2) 0;
   }
 }
 
