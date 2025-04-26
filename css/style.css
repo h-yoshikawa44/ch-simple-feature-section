@@ -123,9 +123,9 @@ a {
 
 .feedback-card-list {
   display: flex;
-  flex-direction: column;
-  row-gap: 48px;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 48px;
+  justify-content: center;
 }
 
 .feedback-card {
@@ -137,6 +137,11 @@ a {
   background-color: var(--bg-color-card);
   border-radius: 12px;
   box-shadow: 0 30px 100px 0 rgb(17 23 41 / 15%);
+}
+
+.feedback-card:hover {
+  transform: scale(1.05, 1.05);
+  transition: transform 0.1s;
 }
 
 .feedback-card__icon {
@@ -176,12 +181,4 @@ a {
 
 .feedback-card__img {
   border-radius: 12px;
-}
-
-@media (width >= 1024px) {
-  .feedback-card-list {
-    flex-flow: row wrap;
-    column-gap: 48px;
-    justify-content: center;
-  }
 }

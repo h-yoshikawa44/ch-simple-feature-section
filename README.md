@@ -8,14 +8,14 @@
 
 <div align="center">
   <h3>
-    <!-- <a href="{https://your-demo-link.your-domain}">
+    <a href="https://h-yoshikawa44.github.io/ch-simple-feature-section/">
       Demo
     </a>
-    <span> | </span> -->
-    <!-- <a href="{https://your-url-to-the-solution}">
+    <span> | </span>
+    <a href="https://devchallenges.io/solution/49326">
       Solution
     </a>
-    <span> | </span> -->
+    <span> | </span>
     <a href="https://devchallenges.io/challenge/simple-feature-section-challenge">
       Challenge
     </a>
@@ -50,17 +50,17 @@ Introduce your projects by taking a screenshot or a gif. Try to tell visitors a 
 
 ### Desktop
 
-（スクショを貼る）
+![desktop](./screenshots/desktop.png)
 
 ### Mobile
 
-（スクショを貼る）
+<img src="./screenshots/mobile.png" width="50%">
 
 ### What I learned
 
 <!-- Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge. -->
 
-（後で書く）
+- How to use image-set.
 
 ### Built with
 
@@ -83,21 +83,21 @@ Other major libraries
 
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges-dashboard) challenge.
 
-- [ ] Create a web page that displays a feature section using HTML and CSS.
-- [ ] Use flexbox and nested flexbox to create a responsive layout for the feature section.
-- [ ] Each feature should include an emoji, title, and description.
-- [ ] Style 3 responsive cards in a three-column layout.
-- [ ] Ensure the cards collapse in smaller screensize.
-- [ ] Apply clean spacing and typography to enhance the overall design.
-- [ ] Make the layout visually appealing with a visually appealing and user-friendly feature section.
-- [ ] Test the web page on different devices and screen sizes to ensure responsiveness.
-- [ ] Optimize the web page for performance and loading speed.
-- [ ] Use semantic HTML elements to structure the content and improve SEO.
-- [ ] Apply CSS styles to enhance the visual presentation of the feature section.
-- [ ] (Optional) Add hover effects or animations to make the feature section more interactive.
-- [ ] Validate the HTML and CSS code to ensure it follows best practices and standards.
-- [ ] Document the code and provide clear instructions on how to run and use the web page.
-- [ ] Deploy the website to make it accessible for everyone.
+- [x] Create a web page that displays a feature section using HTML and CSS.
+- [x] Use flexbox and nested flexbox to create a responsive layout for the feature section.
+- [x] Each feature should include an emoji, title, and description.
+- [x] Style 3 responsive cards in a three-column layout.
+- [x] Ensure the cards collapse in smaller screensize.
+- [x] Apply clean spacing and typography to enhance the overall design.
+- [x] Make the layout visually appealing with a visually appealing and user-friendly feature section.
+- [x] Test the web page on different devices and screen sizes to ensure responsiveness.
+- [x] Optimize the web page for performance and loading speed.
+- [x] Use semantic HTML elements to structure the content and improve SEO.
+- [x] Apply CSS styles to enhance the visual presentation of the feature section.
+- [x] (Optional) Add hover effects or animations to make the feature section more interactive.
+- [x] Validate the HTML and CSS code to ensure it follows best practices and standards.
+- [x] Document the code and provide clear instructions on how to run and use the web page.
+- [x] Deploy the website to make it accessible for everyone.
 
 ## How To Use
 
@@ -115,7 +115,7 @@ npm run dev
 
 <!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For exmpale -->
 
-（後で書く）
+- [MDN - image-set](https://developer.mozilla.org/ja/docs/Web/CSS/image/image-set)
 
 ## Author
 
