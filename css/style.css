@@ -17,6 +17,7 @@
   --text-color-header: var(--white-darken);
   --text-color-sub: var(--gray);
   --text-color-card: var(--white-darken);
+  --text-color-card-sub: var(--gray);
 
   /* font */
   --font-base: 'Outfit', system-ui, 'Avenir', 'Helvetica', 'Arial', sans-serif;
@@ -53,6 +54,12 @@ a {
   font-weight: 500;
   color: inherit;
   text-decoration: inherit;
+}
+
+@media (width >= 1024px) {
+  body {
+    background-size: 128% 56%;
+  }
 }
 
 /* common
@@ -107,6 +114,12 @@ a {
   color: var(--text-color-sub);
 }
 
+@media (width >= 1024px) {
+  .header {
+    padding: 48px 300px 0;
+  }
+}
+
 /* main
 -------------------- */
 
@@ -126,7 +139,7 @@ a {
   flex-direction: column;
   row-gap: 16px;
   max-width: 312px;
-  padding: 24px 20px;
+  padding: 24px;
   background-color: var(--bg-color-card);
   border-radius: 12px;
   box-shadow: 0 30px 100px 0 rgb(17 23 41 / 15%);
@@ -164,9 +177,17 @@ a {
 .feedback-card__description {
   font-size: 1rem;
   line-height: 1.3;
-  color: var(--text-color-card);
+  color: var(--text-color-card-sub);
 }
 
 .feedback-card__img {
   border-radius: 12px;
+}
+
+@media (width >= 1024px) {
+  .feedback-card-list {
+    flex-flow: row wrap;
+    column-gap: 48px;
+    justify-content: center;
+  }
 }
