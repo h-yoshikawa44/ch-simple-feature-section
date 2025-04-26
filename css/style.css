@@ -47,19 +47,13 @@ body {
     url('/images/Background_image@2x.png') 2x,
     url('/images//Background_image@3x.png') 3x
   );
-  background-size: 200% 42.5%;
+  background-size: 1280px;
 }
 
 a {
   font-weight: 500;
   color: inherit;
   text-decoration: inherit;
-}
-
-@media (width >= 1024px) {
-  body {
-    background-size: 128% 56%;
-  }
 }
 
 /* common
