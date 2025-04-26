@@ -31,6 +31,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   line-height: 1.5;
+  background-color: var(--bg-color);
+
+  /*
+    ref: https://developer.mozilla.org/ja/docs/Web/CSS/image/image-set
+    課題から提供されている画像だと、デザイン上の背景画像よりサイズが小さく再現できない...。
+  */
+
+  /* image-set 非対応ブラウザ時のフォールバック */
+  background-image: url('/images/Background_image.svg');
+  /* stylelint-disable-next-line declaration-property-value-no-unknown */
+  background-image: image-set(
+    url('/images/Background_image.svg'),
+    url('/images/Background_image@2x.png') 2x,
+    url('/images//Background_image@3x.png') 3x
+  );
+  background-size: 200% 42.5%;
 }
 
 a {
@@ -65,4 +81,92 @@ a {
   .container {
     max-width: 1280px;
   }
+}
+
+/* header
+-------------------- */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 28px 0;
+}
+
+.header__title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-color-header);
+  text-align: center;
+}
+
+.header__description {
+  margin-top: 12px;
+  font-size: 1rem;
+  color: var(--text-color-sub);
+}
+
+/* main
+-------------------- */
+
+.main {
+  padding: 48px 0;
+}
+
+.feedback-card-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 48px;
+  align-items: center;
+}
+
+.feedback-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  max-width: 312px;
+  padding: 24px 20px;
+  background-color: var(--bg-color-card);
+  border-radius: 12px;
+  box-shadow: 0 30px 100px 0 rgb(17 23 41 / 15%);
+}
+
+.feedback-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  font-size: 1.25rem;
+  border-radius: 50%;
+}
+
+.feedback-card__icon-first {
+  background-color: var(--bg-color-icon-first);
+}
+
+.feedback-card__icon-second {
+  background-color: var(--bg-color-icon-second);
+}
+
+.feedback-card__icon-third {
+  background-color: var(--bg-color-icon-third);
+}
+
+.feedback-card__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-color-card);
+}
+
+.feedback-card__description {
+  font-size: 1rem;
+  line-height: 1.3;
+  color: var(--text-color-card);
+}
+
+.feedback-card__img {
+  border-radius: 12px;
 }
