@@ -139,6 +139,11 @@ a {
   box-shadow: 0 30px 100px 0 rgb(17 23 41 / 15%);
 }
 
+.feedback-card:hover {
+  transform: scale(1.05, 1.05);
+  transition: transform 0.1s;
+}
+
 .feedback-card__icon {
   display: flex;
   align-items: center;
