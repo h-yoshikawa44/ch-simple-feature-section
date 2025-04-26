@@ -123,9 +123,9 @@ a {
 
 .feedback-card-list {
   display: flex;
-  flex-direction: column;
-  row-gap: 48px;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 48px;
+  justify-content: center;
 }
 
 .feedback-card {
@@ -176,12 +176,4 @@ a {
 
 .feedback-card__img {
   border-radius: 12px;
-}
-
-@media (width >= 1024px) {
-  .feedback-card-list {
-    flex-flow: row wrap;
-    column-gap: 48px;
-    justify-content: center;
-  }
 }
