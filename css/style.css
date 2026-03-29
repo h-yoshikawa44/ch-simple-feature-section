@@ -26,11 +26,8 @@
 html,
 body {
   font-family: var(--font-base);
-  font-synthesis: none;
-  text-rendering: optimizelegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
+  font-synthesis: none;
   line-height: 1.5;
   background-color: var(--bg-color);
 
@@ -48,6 +45,9 @@ body {
     url('/images//Background_image@3x.png') 3x
   );
   background-size: 1280px;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
